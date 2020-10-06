@@ -1,5 +1,6 @@
 import unittest
 import conversions
+import conversions_refactored
 
 class ConversionTester(unittest.TestCase):
 	confirmed_CF_Conversions=((300,572),
@@ -30,27 +31,30 @@ class ConversionTester(unittest.TestCase):
 	def test_CF_conversion(self):
 		for val1,val2 in self.confirmed_CF_Conversions:
 			cf_result=conversions.convertCelsiusToFahrenheit(val1)
-			self.assertEqual(val2,cf_result)
+			self.assertEqual(round(val2),round(cf_result))
 	def test_CK_conversion(self):
                 for val3,val4 in self.confirmed_CK_Conversions:
                         ck_result=conversions.convertCelsiusToKelvin(val3)
-                        self.assertEqual(val4,ck_result)
+                        self.assertEqual(round(val4),round(ck_result))
 	def test_FC_conversions(self):
                 for val5,val6 in self.confirmed_FC_Conversions:
                         fc_result=conversions.convertFahrenheitToCelsius(val5)
-                        self.assertEqual(val6,round(fc_result))
+                        self.assertEqual(round(val6),round(fc_result))
 	def test_FK_conversions(self):
                 for val7,val8 in self.confirmed_FK_Conversions:
                         fk_result=conversions.convertFahrenheitToKelvin(val7)
-                        self.assertEqual(val8,round(fk_result))
+                        self.assertEqual(round(val8),round(fk_result))
 	def test_KF_conversions(self):
                 for val9,val10 in self.confirmed_KF_Conversions:
                         kf_result=conversions.convertKelvinToFahrenheit(val9)
-                        self.assertEqual(val10,round(kf_result))
+                        self.assertEqual(round(val10),round(kf_result))
 	def test_KC_conversions(self):
                 for val11,val12 in self.confirmed_KC_Conversions:
                         kc_result=conversions.convertKelvinToCelsius(val11)
-                        self.assertEqual(val12,kc_result)
+                        self.assertEqual(round(val12),round(kc_result))
+class RefactorTest(unittest.TestCase):
+		code
+
 if __name__ == '__main__':
 	unittest.main()
 

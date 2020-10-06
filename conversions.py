@@ -16,6 +16,3 @@ def convertKelvinToCelsius(kelv):
 def convertKelvinToFahrenheit(kelv):
 	fahr=((kelv*(9/5))-459.67)
 	return fahr
-print(convertCelsiusToFahrenheit(100))
-print(convertCelsiusToKelvin(0))
-print(convertFahrenheitToCelsius(212))
