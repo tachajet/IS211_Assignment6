@@ -33,7 +33,7 @@ def convert(fromUnit,toUnit,value):
 			convertedVal=(value-273.15)
 		elif (toUnit.upper()=="FAHRENHEIT"):
 			convertedVal=((value*(9/5))-459.67)
-		elif (toUnit.upper()==KELVIN):
+		elif (toUnit.upper()=="KELVIN"):
 			convertedVal=value
 		elif (toUnit.upper()=="METER") or (toUnit.upper()=="MILE") or (toUnit.upper()=="YARD"):
 			raise ConversionNotPossible
@@ -50,7 +50,7 @@ def convert(fromUnit,toUnit,value):
 		if (toUnit.upper()=="FAHRENHEIT"):
 			convertedVal=value
 		elif (toUnit.upper()=="KELVIN"):
-			convertedVal=((value+459.67)*(5/9)))
+			convertedVal=((value+459.67)*(5/9))
 		elif (toUnit.upper()=="CELSIUS"):
 			convertedVal=((value-32)*(5/9))
 		elif (toUnit.upper()=="METER") or (toUnit.upper()=="MILE") or (toUnit.upper()=="YARD"):
@@ -66,7 +66,3 @@ class ConversionNotPossible(Exception):
 		self.message=message
 		super().__init__(self.message)
 
-	
-print((convert("meter", "meter", 5)))
-print((convert("meter", "yard", 5)))
-print((convert("mile", "celsius", 4)))
